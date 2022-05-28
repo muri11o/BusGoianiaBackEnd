@@ -39,13 +39,14 @@ namespace BusGoiania.MiddlewareRMTC.Controllers
             return Ok();
         }
 
-        [HttpGet("maquina-autoatendimento")]
-        public async Task<IActionResult> ObterMaquinasAutoAtendimento()
+        [HttpGet("terminal-onibus")]
+        public async Task<IActionResult> ObterTerminaisOnibus()
         {
             try
             {
-                var result = await _rmtcService.ObterTerminasOnibus();
-                return Ok();
+                var paginaWeb = await _rmtcService.ObterTerminasOnibus();
+                var result = TerminaisOnibusHandler.Handle(paginaWeb);
+                return CustomResponse(result);
             }
             catch (Exception ex)
             {

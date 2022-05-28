@@ -1,5 +1,6 @@
 ﻿using BusGoiania.MiddlewareRMTC.DTOs;
 using BusGoiania.MiddlewareRMTC.Extensions;
+using BusGoiania.MiddlewareRMTC.Interfaces;
 
 namespace BusGoiania.MiddlewareRMTC.ManipuladoresHtml
 {
