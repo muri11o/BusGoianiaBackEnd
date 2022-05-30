@@ -1,9 +1,9 @@
-﻿using BusGoiania.MiddlewareRMTC.Interfaces;
-using BusGoiania.MiddlewareRMTC.Notifications;
+﻿using BusGoiania.AuthProvider.Interfaces;
+using BusGoiania.AuthProvider.Notifications;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace BusGoiania.MiddlewareRMTC.Controllers
+namespace BusGoiania.AuthProvider.Controllers
 {
     [ApiController]
     public class MainController : ControllerBase
@@ -11,6 +11,7 @@ namespace BusGoiania.MiddlewareRMTC.Controllers
         private readonly INotifier _notifier;
 
         protected MainController(INotifier notifier) => _notifier = notifier;
+
         protected ActionResult CustomResponse(ModelStateDictionary modelStade)
         {
             if (!modelStade.IsValid)
@@ -48,6 +49,5 @@ namespace BusGoiania.MiddlewareRMTC.Controllers
             }
         }
         protected void NotifyError(string message) => _notifier.Handle(new Notification(message));
-
     }
 }

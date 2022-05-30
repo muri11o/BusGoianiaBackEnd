@@ -23,11 +23,11 @@ namespace BusGoiania.MiddlewareRMTC.Controllers
             {
                 var paginaWeb = await _rmtcService.ObterHorariosPontoOnibus(numeroPontoOnibus);
                 var result = PontoOnibusHandler.Handle(paginaWeb);
-                return Ok(result);
+                return CustomResponse(result);
             }
             catch (Exception ex)
             {
-                NotityError($"Falha ao processar a requisição. Detalhes {ex.Message}");
+                NotifyError($"Falha ao processar a requisição. Detalhes {ex.Message}");
                 return CustomResponse();
             }
         }
@@ -50,7 +50,7 @@ namespace BusGoiania.MiddlewareRMTC.Controllers
             }
             catch (Exception ex)
             {
-                NotityError($"Falha ao processar a requisição. Detalhes {ex.Message}");
+                NotifyError($"Falha ao processar a requisição. Detalhes {ex.Message}");
                 return CustomResponse();
             }
         }
