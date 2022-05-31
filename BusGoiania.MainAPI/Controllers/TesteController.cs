@@ -10,7 +10,7 @@ namespace BusGoiania.MainAPI.API.Controllers
     {
         public IActionResult Get()
         {
-            return Ok("I love you");
+            return Ok("I love youu");
         }
     }
 }
