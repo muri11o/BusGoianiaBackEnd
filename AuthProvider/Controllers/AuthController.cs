@@ -1,6 +1,5 @@
 ﻿using BusGoiania.AuthProvider.Data.Conta;
 using BusGoiania.AuthProvider.DTOs;
-using BusGoiania.AuthProvider.Extensions;
 using BusGoiania.AuthProvider.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

@@ -1,5 +1,6 @@
 ﻿using BusGoiania.MiddlewareRMTC.Interfaces;
 using BusGoiania.MiddlewareRMTC.ManipuladoresHtml;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BusGoiania.MiddlewareRMTC.Controllers
@@ -10,7 +11,9 @@ namespace BusGoiania.MiddlewareRMTC.Controllers
     {
         private readonly ILogger<RmtcController> _logger;
         private readonly IRmtcHttpClient _rmtcService;
-        public RmtcController(ILogger<RmtcController> logger, IRmtcHttpClient rmtcService, INotifier notifier) : base(notifier)
+        public RmtcController(ILogger<RmtcController> logger, 
+            IRmtcHttpClient rmtcService, 
+            INotifier notifier) : base(notifier)
         {
             _logger = logger;
             _rmtcService = rmtcService;
@@ -30,13 +33,6 @@ namespace BusGoiania.MiddlewareRMTC.Controllers
                 NotifyError($"Falha ao processar a requisição. Detalhes {ex.Message}");
                 return CustomResponse();
             }
-        }
-
-        [HttpGet("linha-onibus")]
-        public async Task<IActionResult> ObterTabelaHorarioLinhaOnibus([FromHeader] string numeroLinhaOnibus)
-        {
-            var result = await _rmtcService.ObterTabelaHorarioLinhaOnibus(numeroLinhaOnibus);
-            return Ok();
         }
 
         [HttpGet("terminal-onibus")]

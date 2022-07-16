@@ -2,6 +2,6 @@
 {
     public class AppSettings
     {
-        public string UrlBase { get; set; }
+        public string UrlRmtc { get; set; }
     }
 }

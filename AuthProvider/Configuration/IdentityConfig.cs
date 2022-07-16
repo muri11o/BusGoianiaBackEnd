@@ -1,4 +1,5 @@
-﻿using BusGoiania.AuthProvider.Data;
+﻿using BusGoiania.AuthProvider.Controllers;
+using BusGoiania.AuthProvider.Data;
 using BusGoiania.AuthProvider.Data.Conta;
 using BusGoiania.AuthProvider.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;

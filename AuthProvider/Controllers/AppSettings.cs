@@ -1,4 +1,4 @@
-﻿namespace BusGoiania.AuthProvider.Extensions
+﻿namespace BusGoiania.AuthProvider.Controllers
 {
     public class AppSettings
     {
