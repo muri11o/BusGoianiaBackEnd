@@ -14,6 +14,18 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.ResolveDependencies();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("poc",
+        builder =>
+        {
+            builder.WithOrigins()
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials();
+        });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,6 +34,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("poc");
 
 app.UseHttpsRedirection();
 

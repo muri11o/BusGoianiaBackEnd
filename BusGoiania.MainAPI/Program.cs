@@ -14,6 +14,18 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.ResolveDependencies();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("poc",
+        builder =>
+        {
+            builder.WithOrigins()
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials();
+        });
+});
+
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "BusGoiania - API", Version = "v1" });
@@ -77,6 +89,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("poc");
 
 app.UseHttpsRedirection();
 
