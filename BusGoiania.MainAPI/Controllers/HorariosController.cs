@@ -1,10 +1,10 @@
 ﻿using BusGoiania.MainAPI.Interfaces;
+using BusGoiania.MainDomain.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BusGoiania.MainAPI.Controllers
 {
-    [ApiController]
     [Authorize]
     [Route("v1/api")]
     

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BusGoiania.AuthProvider.Controllers
 {
-    [Route("api/conta")]
+    [Route("v1/api/conta")]
     public class ContaController : MainController
     {
         private readonly UserManager<Usuario> _userManager;

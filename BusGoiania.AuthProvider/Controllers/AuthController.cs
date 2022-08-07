@@ -11,7 +11,7 @@ using System.Text;
 
 namespace BusGoiania.AuthProvider.Controllers
 {
-    [Route("api/auth")]
+    [Route("v1/api/auth")]
     public class AuthController : MainController
     {
         private readonly SignInManager<Usuario> _signInManager;

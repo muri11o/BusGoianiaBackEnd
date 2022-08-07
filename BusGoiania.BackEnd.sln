@@ -9,6 +9,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusGoiania.MainAPI", "BusGo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusGoiania.AuthProvider", "BusGoiania.AuthProvider\BusGoiania.AuthProvider.csproj", "{080E0B63-38DA-46FE-9162-6884A15A97D9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusGoiania.Auth", "BusGoiania.Auth", "{2499FC55-2ED2-4952-A857-9D024DEF3A04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusGoianiaMain", "BusGoianiaMain", "{B47573DD-048B-48DF-8B7E-F7E32D994571}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusGoianiaMiddleware", "BusGoianiaMiddleware", "{F1A6CB7C-A32D-4E09-B79F-3B9813E0E2FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusGoiania.MainDomain", "BusGoiania.MainDomain\BusGoiania.MainDomain.csproj", "{0BF50445-81C7-4044-B264-01B46FA27400}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusGoiania.MainData", "BusGoiania.MainData\BusGoiania.MainData.csproj", "{2901AFC1-7D4D-440B-98C0-1AE125EC8F43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +37,24 @@ Global
 		{080E0B63-38DA-46FE-9162-6884A15A97D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{080E0B63-38DA-46FE-9162-6884A15A97D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{080E0B63-38DA-46FE-9162-6884A15A97D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BF50445-81C7-4044-B264-01B46FA27400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BF50445-81C7-4044-B264-01B46FA27400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BF50445-81C7-4044-B264-01B46FA27400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BF50445-81C7-4044-B264-01B46FA27400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2901AFC1-7D4D-440B-98C0-1AE125EC8F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2901AFC1-7D4D-440B-98C0-1AE125EC8F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2901AFC1-7D4D-440B-98C0-1AE125EC8F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2901AFC1-7D4D-440B-98C0-1AE125EC8F43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{26A53506-7C68-4D8F-AC1C-43F33EC926B8} = {F1A6CB7C-A32D-4E09-B79F-3B9813E0E2FE}
+		{33527236-0B25-434C-9D44-430A2109DD57} = {B47573DD-048B-48DF-8B7E-F7E32D994571}
+		{080E0B63-38DA-46FE-9162-6884A15A97D9} = {2499FC55-2ED2-4952-A857-9D024DEF3A04}
+		{0BF50445-81C7-4044-B264-01B46FA27400} = {B47573DD-048B-48DF-8B7E-F7E32D994571}
+		{2901AFC1-7D4D-440B-98C0-1AE125EC8F43} = {B47573DD-048B-48DF-8B7E-F7E32D994571}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1386D1BB-D5EA-463F-9A64-538799950157}

@@ -1,7 +1,7 @@
-﻿using BusGoiania.MainAPI.Interfaces;
-using BusGoiania.MainAPI.Notifications;
+﻿using BusGoiania.MainDomain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using BusGoiania.MainDomain.Notifications;
 
 namespace BusGoiania.MainAPI.Controllers
 {

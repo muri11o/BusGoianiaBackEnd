@@ -19,10 +19,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("poc",
         builder =>
         {
-            builder.WithOrigins()
+            builder
+            .AllowAnyOrigin()
             .AllowAnyMethod()
-            .AllowAnyHeader()
-            .AllowCredentials();
+            .AllowAnyHeader();
         });
 });
 
