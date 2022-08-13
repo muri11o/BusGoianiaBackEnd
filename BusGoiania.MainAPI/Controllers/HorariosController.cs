@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BusGoiania.MainAPI.Controllers
 {
-    [Authorize]
     [Route("v1/api")]
     
     public class HorariosController : MainController

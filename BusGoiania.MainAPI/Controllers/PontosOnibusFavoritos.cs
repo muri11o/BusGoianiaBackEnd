@@ -43,8 +43,8 @@ namespace BusGoiania.MainAPI.Controllers
             }
         }
 
-        [HttpPost("pontos-onibus-favotiros")]
-        public async Task<ActionResult<PontoOnibusFavoritoDTO>> Post([FromQuery] string numeroPonto)
+        [HttpGet("adicionar-favoritos")]
+        public async Task<ActionResult<PontoOnibusFavoritoDTO>> Get([FromQuery] string numeroPonto)
         {
             try
             {

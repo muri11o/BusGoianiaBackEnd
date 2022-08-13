@@ -6,9 +6,7 @@ using System.IdentityModel.Tokens.Jwt;
 
 namespace BusGoiania.MainAPI.Controllers
 {
-    [Authorize]
     [Route("v1/api")]
-
     public class TerminaisController : MainController
     {
         private readonly ILogger<TerminaisController> _logger;
